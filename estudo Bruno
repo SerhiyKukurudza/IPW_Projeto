@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="pt-pt">
+
+<head>
+    <meta charset="utf-8">
+    <title>Badjoras</title>
+    <style type="text/css">
+        #banner {
+            width: 50%;
+        }
+
+        .principal {
+            background: orange;
+            padding: 30px;
+        }
+
+        .titulo-principal {
+            padding-left: 20px;
+            text-align: center;
+            color: orange
+        }
+
+        .titulo-centralizado {
+            text-align: left;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        p {
+            text-align: left;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+
+        #missao {
+            font-size: 30px
+        }
+
+        em strong {
+            color: blue;
+        }
+
+        /* em = tam da fonte utlizda no dispositivo */
+
+
+        .itens {
+            font-style: oblique
+        }
+
+        .beneficios {
+            padding: 20px;
+        }
+
+        ul {
+            display: inline-block;
+            vertical-align: top;
+            width: 20%;
+            margin-right: 15%;
+        }
+
+        .imagem_beneficios {
+            width: 10%
+        }
+
+        .tabela {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        .tabela td {
+            border-color: black;
+            border-style: solid;
+            border-width: 1px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            overflow: hidden;
+            padding: 10px 5px;
+            word-break: normal;
+        }
+
+        .tabela th {
+            border-color: black;
+            border-style: solid;
+            border-width: 1px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            overflow: hidden;
+            padding: 10px 5px;
+            word-break: normal;
+        }
+
+        .tabela .categorias {
+            background-color: #cbcefb;
+            border-color: inherit;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            vertical-align: center;
+        }
+
+        .tabela .titulo {
+            background-color: #ffce93;
+            border-color: inherit;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            vertical-align: center;
+        }
+
+        .tabela .informacao {
+            background-color: #9bf8a8;
+            border-color: inherit;
+            text-align: center;
+            vertical-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo-principal"> TESTES</h1>
+    </header>
+
+    <img id="banner" src="banner.JPG">
+    <div class="principal">
+        <h2 class="titulo-centralizado">Sobre a Barbearia Alura</h2>
+
+        <p>Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o mercado o que há de melhor
+            para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos
+            clientes a cada dia.</p>
+
+        <p id="missao"><em>Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de vida aos
+                    clientes"</strong>.</em></p>
+
+        <button id="meuBotao">Clique Aqui</button>
+        <br> </br>
+
+        <form name="form1" onsubmit="envio();">
+            Nome completo:<input type="text" name="nome">
+            <br>
+            Morada:<input type="text" name="morada">
+            <br>
+            <input type="submit" value="Badjoras">
+
+    </div>
+
+
+    <p id="demo">JavaScript pode modificar conteúdo HTML.</p>
+    <button onclick='document.getElementById("demo").innerHTML ="<p>Tag alterada!</p>"'> Faz alta cena aqui neste botão!
+    </button>
+
+    <button onclick="this.innerHTML=Date()"> Dia e Hora:</button>
+    <div class="beneficios">
+        <h3 class="titulo-centralizado"> Benefícios</h3>
+
+        <ul>
+            <li class="itens">Atendimento aos Clientes</li>
+            <li class="itens">Espaço diferenciado</li>
+            <li class="itens">Localização</li>
+            <li class="itens">Profissionais Qualificados</li>
+        </ul>
+
+        <select name="cores" onChange="document.bgColor = this.value;">
+            <option selected value="white">Escolha sua cor</option>
+            <option value="red">Vermelha</option>
+            <option value="green">Verde</option>
+            <option value="yellow">Amarela</option>
+        </select>
+    </div>
+
+    <script>
+        document.getElementById("meuBotao").addEventListener("click", myFunction);
+        function myFunction() {
+            document.write("Badjoras");
+        }
+
+        function envio() {
+            alert("Informação enviada!");
+        }
+    </script>
+
+    <table class="tabela" align="left">
+        <thead>
+            <tr>
+                <th class="titulo" colspan="4">Badjoras</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="categorias">Golos</td>
+                <td class="categorias">Prêmios individuais</td>
+                <td class="categorias">Recordes</td>
+            </tr>
+            <tr>
+                <td class="informacao"><a href="https://pt.wikipedia.org/wiki/Bundesliga_de_1966%E2%80%9367"
+                        target="_blank">Bundesliga</a> de 1966–67 (28 golos)</td>
+                <td class="informacao" rowspan="2"><a
+                        href="https://de.wikipedia.org/wiki/Fu%C3%9Fball-Regionalliga_S%C3%BCd"
+                        target="_blank">Regionalliga Süd</a>: 1964–65</td>
+                <td class="informacao" rowspan="2">Maior artilheiro da Bundesliga com 365 golos</td>
+            </tr>
+            <tr>
+                <td class="informacao"><a href="https://pt.wikipedia.org/wiki/Bundesliga_de_1968%E2%80%9369"
+                        target="_blank">Bundesliga</a> de 1968–69 (30 golos)</td>
+            </tr>
+            <tr>
+                <td class="informacao"><a href="https://pt.wikipedia.org/wiki/Bundesliga_de_1969%E2%80%9370"
+                        target="_blank">Bundesliga</a> de 1969–70 (38 golos)</td>
+                <td class="informacao" rowspan="4"><a href="https://pt.wikipedia.org/wiki/Bundesliga"
+                        target="_blank">Campeonato
+                        Alemão</a>: 1968–1969, 1971–1972, 1972–1973, 1973–1974</td>
+                <td class="informacao" rowspan="2"><a href="https://pt.wikipedia.org/wiki/Ballon_d%27Or"
+                        target="_blank">Ballon
+                        d'Or</a>: 1970</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
